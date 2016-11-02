@@ -1,3 +1,3 @@
 <?php
-header('Location: http://www.soundcloud.com/codefiction');
+ header('Location: http://www.soundcloud.com/codefiction');
 ?>
