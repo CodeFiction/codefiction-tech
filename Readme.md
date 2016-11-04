@@ -3,8 +3,9 @@
 
 [Codefiction Home Page](http://www.codefiction.tech) homepage source code.
 
-## Build
+## Build and prepare 
 
 ```sh
 composer install
+make
 ```
