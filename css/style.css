@@ -498,3 +498,6 @@ fieldset[disabled] .btn-success.active {
   opacity: 0;
   display: none;
 }
+#about .whoami {
+	padding-top: 40px;
+}
