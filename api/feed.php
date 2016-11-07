@@ -6,6 +6,7 @@
     class PodcastObject{
         public $title;
         public $url;
+        public $duration;
     }
 
     class PodcastReader {
@@ -28,6 +29,7 @@
                 $currentObject = new PodcastObject();
                 $currentObject->title = $item->getElementsByTagName('title')->item(0)->nodeValue;
                 $currentObject->url = $item->getElementsByTagName('link')->item(0)->nodeValue;
+                $currentObject->duration = $item->getElementsByTagName('itunes:duration')->nodeValue;
                 $response[] = $currentObject;
             }
 
