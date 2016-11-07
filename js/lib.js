@@ -4,7 +4,7 @@
 
     var createItem = function (obj) {
       var template = '<a href="' + obj.url + '" class="list-group-item list-group-item-action">'
-        + '<h5 class="list-group-item-heading text-left"> <i class="fa fa-fw fa-play"></i> ' + obj.title + ' </h5>'
+        + '<h5 class="list-group-item-heading text-left"> <i class="fa fa-fw fa-play"></i> ' + obj.title + '(' + obj.duration + ') </h5>'
         + '<p class="list-group-item-text"></p>'
         + '</a>'
 
