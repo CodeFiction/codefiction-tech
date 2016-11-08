@@ -20,16 +20,17 @@
         }
 
         public function ToJson(){
-            $response = array();
+            $response = [];
             $channel = $this->xmlDoc->getElementsByTagName('channel')->item(0);
 
             $items = $channel->getElementsByTagName('item');
+            $xpath = new \DOMXPath($this->xmlDoc);
 
             foreach($items as $item) {
                 $currentObject = new PodcastObject();
                 $currentObject->title = $item->getElementsByTagName('title')->item(0)->nodeValue;
                 $currentObject->url = $item->getElementsByTagName('link')->item(0)->nodeValue;
-                $currentObject->duration = $item->getElementsByTagName('itunes:duration')->nodeValue;
+                $currentObject->duration = $xpath->query("itunes:duration", $item)->item(0)->nodeValue;
                 $response[] = $currentObject;
             }
 
@@ -39,6 +40,7 @@
 
     $reader = new PodcastReader();
     $result = $reader->Load()->ToJson();
+    header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
+    header("Pragma: no-cache"); // HTTP/1.0
     header('Content-Type: application/json');
     print $result;
-?>
