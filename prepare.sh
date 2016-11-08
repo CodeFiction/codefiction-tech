@@ -8,5 +8,5 @@ cp -a vendor/twbs/bootstrap/dist/css/. vendor/css/ &&
 cp -a vendor/twbs/bootstrap/dist/js/. vendor/js/ && 
 cp -a vendor/twbs/bootstrap/dist/fonts/. vendor/fonts/
 echo "removing not required stuff..."
-rm -Rf vendor/components && rm -Rf vendor/twbs && rm -Rf .git/
+rm -Rf vendor/components && rm -Rf vendor/twbs
 echo "ready to distribute"
