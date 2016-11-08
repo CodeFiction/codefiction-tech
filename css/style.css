@@ -501,3 +501,20 @@ fieldset[disabled] .btn-success.active {
 #about .whoami {
 	padding-top: 40px;
 }
+
+.svg-gitter
+{	transform: translateY(6px) scale(1.4);
+	width : 27px !important;
+	fill: #ffffff
+}
+.svg-gitter path
+{
+	fill: #ffffff;
+}
+
+a:hover .svg-gitter,
+a:focus .svg-gitter,
+a:active .svg-gitter
+{
+	fill : #18BC9C;
+}

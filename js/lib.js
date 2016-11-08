@@ -20,6 +20,7 @@
     });
   });
 })(jQuery);
+
 (function ($) {
   "use strict";
 
