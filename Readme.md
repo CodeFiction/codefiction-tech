@@ -9,3 +9,6 @@
 composer install
 make
 ```
+
+# Contribution
+Fork the repository, make your changes and send a Pull Request. Please don't merge any PR unless you're 100% sure it's working.
