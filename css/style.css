@@ -518,3 +518,6 @@ a:active .svg-gitter
 {
 	fill : #18BC9C;
 }
+#embedded-player {
+  z-index:-10000;
+}
