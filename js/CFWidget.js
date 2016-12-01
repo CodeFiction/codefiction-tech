@@ -3,7 +3,7 @@
  */
 var CFWidget = function() {
     this.init();
-}
+};
 
 $.extend(CFWidget.prototype, {
     widget: null,
@@ -22,7 +22,8 @@ $.extend(CFWidget.prototype, {
         w.load(url);
         w.bind(SC.Widget.Events.READY,
             function ready() {
-                $('#embedded-player').css("z-index", 0);
+                $('#embedded-player').css("z-index", 1000).css("margin-bottom", 0);
+                $('.close-player').show();
                 w['play']();
             }
         );
@@ -32,8 +33,10 @@ $.extend(CFWidget.prototype, {
                     w['seekTo'](ms);
             }
         );
-
-
+    },
+    stop: function () {
+        this.widget['pause']();
+        console.log('poz');
     }
 });
 

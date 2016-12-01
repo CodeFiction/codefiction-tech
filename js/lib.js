@@ -33,6 +33,7 @@
       result.items.forEach(function (item, idx) {
         var $item = createShortClipItem(item);
         $item.click(function () {
+          $('.close-player').hide();
           widget.seekTo(item.track, item.position);
         });
         $list.append($item);
@@ -56,7 +57,12 @@
     scrolling: 'no'
   });
 
-  $('#embedded-player').html(iFrame);
+  $('#player').html(iFrame);
+  $('.close-player').bind('click', function (event) {
+     widget.stop();
+    $('#embedded-player').css("z-index", -1000).css("margin-bottom", -1000);
+
+  });
 
   $('.page-scroll a').bind('click', function (event) {
     var $anchor = $(this);
