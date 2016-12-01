@@ -22,6 +22,7 @@ $.extend(CFWidget.prototype, {
         w.load(url);
         w.bind(SC.Widget.Events.READY,
             function ready() {
+                //Çeşitli çirkinlikler falan
                 $('#embedded-player').css("z-index", 1000).css("margin-bottom", 0);
                 $('.close-player').show();
                 w['play']();
