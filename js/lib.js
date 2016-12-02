@@ -34,7 +34,7 @@
         var $item = createShortClipItem(item);
         $item.click(function () {
           $('.close-player').hide();
-          widget.seekTo(item.track, item.position);
+          window.widget.seekTo(item.track, item.position);
         });
         $list.append($item);
       });
@@ -59,7 +59,7 @@
 
   $('#player').html(iFrame);
   $('.close-player').bind('click', function (event) {
-     widget.stop();
+     window.widget.stop();
     $('#embedded-player').css("z-index", -1000).css("margin-bottom", -1000);
 
   });
