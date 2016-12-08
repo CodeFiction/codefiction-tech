@@ -415,6 +415,7 @@ fieldset[disabled] .btn-success.active {
   text-align: center;
   font-size: 20px;
   line-height: 45px;
+  margin: 2px;
 }
 .btn:focus,
 .btn:active,
@@ -517,4 +518,17 @@ a:focus .svg-gitter,
 a:active .svg-gitter
 {
 	fill : #18BC9C;
+}
+#embedded-player {
+  z-index:-10000;
+  margin-bottom:-1000px;
+  height:100px;
+}
+
+.close-player {
+  position: absolute;
+  right: 10px;
+  color: black;
+  top: -34px;
+  background: #f2f2f2;
 }

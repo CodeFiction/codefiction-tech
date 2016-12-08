@@ -10,13 +10,18 @@ services:
             - ./nginx.conf:/etc/nginx/conf.d/default.conf
         networks:
             - code-network
+        depends_on:
+                  - "php"
     php:
-        image: php:fpm
+        build: .
         volumes:
             - ./:/codefiction
         networks:
             - code-network
-
+        environment:
+                - DEVELOPMENT=true
+        command: "bash -c 'sh /codefiction/install.sh'"
+        working_dir: '/codefiction'
 networks:
     code-network:
         driver: bridge
