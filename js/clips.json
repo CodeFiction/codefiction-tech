@@ -1,30 +1,34 @@
 {
   "items": [
     {
+      "position": 1650000,
       "title": ".NET Core nedir? Ne değildir?",
-      "track": "290404729",
-      "position": 1650000
+      "track": "290404729"
     },
     {
+      "position": 459000,
       "title": "Şirket habitatı ve adaptasyon =)",
-      "track": "290404729",
-      "position": 459000
+      "track": "290404729"
     },
     {
+      "position": 2603000,
       "title": "Kadın yazılımcılar ve IT sektörü",
-      "track": "297796062",
-      "position": 2603000
-    },{
+      "track": "297796062"
+    },
+    {
+      "position": 2155000,
       "title": "Gençleri sektöre nasıl entegre edebiliriz?",
-      "track": "296910653",
-      "position": 2155000
-    },{
+      "track": "296910653"
+    },
+    {
+      "position": 2725000,
       "title": "Esnek çalışma saatleri =)",
-      "track": "296910653",
-      "position": 2725000
-    },{
-      "title": "AI Singularity!! ┗[© ♒ ©]┛",
-      "track": "298693971",
-      "position: 1748000
+      "track": "296910653"
+    },
+    {
+      "position": 1748000,
+      "title": "AI Singularity meselesi! ┗[© ♒ ©]┛",
+      "track": "298693971"
+    }
   ]
 }
