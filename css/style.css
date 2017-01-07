@@ -532,3 +532,49 @@ a:active .svg-gitter
   top: -34px;
   background: #f2f2f2;
 }
+.about-event{
+  background-color: #ffffff;
+  
+}
+.about-event .container {
+  border-top: solid 1px #eeeeee;
+  padding: 30px 0;
+}
+.about-program{
+background-color: #ffffff;
+color:#464446;
+}
+
+.about-program .speaker {
+  border-top: solid 1px #eeeeee;
+  padding: 30px 0;
+}
+.about-program p {
+  font-size: 13px;
+}
+.about-program h3{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 10px;
+}
+.location h3{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 10px;
+}
+.speaker-thumb {
+  width: 60px;
+  height: 60px;
+}
+.section h1 {
+  text-align: center;
+}
+.li-nolist{
+  list-style-type: none;
+}
+.icon-img {
+  width: 16px;
+  height: 16px;
+}
