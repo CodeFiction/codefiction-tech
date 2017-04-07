@@ -4,15 +4,14 @@
 
 [Codefiction Home Page](http://www.codefiction.tech) homepage source code.
 
-## Build and prepare 
+## Requirements
+ - composer
+ - docker
+
+## Build and Run
 
 ```sh
 composer install
-make
-```
-
-For Docker:
-```sh
 docker-compose up
 ```
 
