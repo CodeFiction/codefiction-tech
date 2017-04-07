@@ -15,5 +15,7 @@ composer install
 docker-compose up
 ```
 
+Navigate to `http://localhost:8080/`
+
 # Contribution
 Fork the repository, make your changes and send a Pull Request. Please don't merge any PR unless you're 100% sure it's working.
