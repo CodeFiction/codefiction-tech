@@ -3,4 +3,4 @@ php -r "if (hash_file('SHA384', 'composer-setup.php') === 'aa96f26c2b67226a324c2
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
 php composer.phar install
-sh prepare.sh
+sh ./prepare.sh
