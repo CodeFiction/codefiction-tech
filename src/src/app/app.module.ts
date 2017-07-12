@@ -2,10 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
-import { LandingSectionComponent } from './Components/landing-section/landing-section.component';
-import { AboutSectionComponent } from './Components/about-section/about-section.component';
-import { PageFooterComponent } from './Components/page-footer/page-footer.component';
+import {
+  MenuBarComponent,
+  LandingSectionComponent,
+  AboutSectionComponent,
+  PageFooterComponent,
+  PodcastsSectionComponent
+} from './components';
+
+import { PodcastService } from './services'
 
 @NgModule({
   declarations: [
@@ -13,12 +18,15 @@ import { PageFooterComponent } from './Components/page-footer/page-footer.compon
     MenuBarComponent,
     LandingSectionComponent,
     AboutSectionComponent,
-    PageFooterComponent
+    PageFooterComponent,
+    PodcastsSectionComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    PodcastService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
