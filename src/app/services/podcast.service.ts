@@ -3,7 +3,6 @@ import { Http, Response } from '@angular/http';
 import { Podcast } from '../models';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-import 'rxjs/Rx';
 
 @Injectable()
 export class PodcastService {
