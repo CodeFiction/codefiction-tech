@@ -1,0 +1,15 @@
+.cf-patreon {
+    background-image: url('/assets/patreon-logo.svg');
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+.patreon-fa {
+    display: inline-block;
+}
+
+.cf-patreon:hover {
+    fill: #18BC9C;
+}
