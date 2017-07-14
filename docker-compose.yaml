@@ -1,0 +1,48 @@
+version: '2'
+services:
+  cmd:
+    build: .
+    environment:
+      NODE_ENV: development
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+
+  lint:
+    build: .
+    command: ng lint
+    environment:
+      NODE_ENV: development
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+
+  serve:
+    build: .
+    command: ng serve --host 0.0.0.0
+    environment:
+      NODE_ENV: development
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "4200:4200"
+
+  test:
+    build: .
+    command: ng test
+    environment:
+      NODE_ENV: development
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    privileged: true # for Chrome to run on Docker
+
+  e2e:
+    build: .
+    command: ng e2e
+    environment:
+      NODE_ENV: development
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
