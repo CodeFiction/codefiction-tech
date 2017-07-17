@@ -5,17 +5,17 @@
 [Codefiction Home Page](http://www.codefiction.tech) homepage source code.
 
 ## Requirements
- - composer
- - docker
+ - npm v4+
+ - ng v1.2+
 
 ## Build and Run
 
 ```sh
-composer install
-docker-compose up
+npm install
+ng serve (local dev)
 ```
 
-Navigate to `http://localhost:8080/`
+Navigate to `http://localhost:4200/`
 
 # Contribution
 Fork the repository, make your changes and send a Pull Request. Please don't merge any PR unless you're 100% sure it's working.
