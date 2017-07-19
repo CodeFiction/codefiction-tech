@@ -2,12 +2,12 @@ FROM teracy/angular-cli
 
 MAINTAINER codefiction
 
-ENV HOME=/usr/src/app
+ENV APPDIR=/usr/src/codefiction-tech
 
-RUN mkdir $HOME
+RUN mkdir $APPDIR
 
-COPY package.json $HOME/
+COPY package.json $APPDIR/
 
-WORKDIR $HOME
+WORKDIR $APPDIR
 
 RUN rm -rf node_modules && npm install && npm cache clean && rm -rf ~/.npm

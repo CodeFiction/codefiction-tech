@@ -5,8 +5,8 @@ services:
     environment:
       NODE_ENV: development
     volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
+      - .:/usr/src/codefiction-tech
+      - /usr/src/codefiction-tech/node_modules
 
   lint:
     build: .
@@ -14,8 +14,8 @@ services:
     environment:
       NODE_ENV: development
     volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
+      - .:/usr/src/codefiction-tech
+      - /usr/src/codefiction-tech/node_modules
 
   serve:
     build: .
@@ -23,8 +23,8 @@ services:
     environment:
       NODE_ENV: development
     volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
+      - .:/usr/src/codefiction-tech
+      - /usr/src/codefiction-tech/node_modules
     ports:
       - "4200:4200"
 
@@ -34,8 +34,8 @@ services:
     environment:
       NODE_ENV: development
     volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
+      - .:/usr/src/codefiction-tech
+      - /usr/src/codefiction-tech/node_modules
     privileged: true # for Chrome to run on Docker
 
   e2e:
@@ -44,5 +44,5 @@ services:
     environment:
       NODE_ENV: development
     volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
+      - .:/usr/src/codefiction-tech
+      - /usr/src/codefiction-tech/node_modules
