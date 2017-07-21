@@ -4,15 +4,26 @@
 
 [Codefiction Home Page](http://www.codefiction.tech) homepage source code.
 
-## Requirements
- - npm v4+
- - ng v1.2+
+## Building the code
+This repository is built using [Angular](angular.io). There are two ways to build and test this application
 
-## Build and Run
+### Building using Docker
+Why would you install stupid stuff to your shiny laptop while you can Dockerize it? Exactly!
+
+```sh
+docker-compose up serve
+docker-compose up lint
+docker-compose up test
+```
+
+### Building using local Node
+If you are one of those old fashioned guys you can still build the code using the following `npm` commands
 
 ```sh
 npm install
-ng serve (local dev)
+npm test
+npm run serve
+npm run lint
 ```
 
 Navigate to `http://localhost:4200/`
