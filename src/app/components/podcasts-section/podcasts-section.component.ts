@@ -13,15 +13,25 @@ import { Subscription } from 'rxjs/Subscription';
 export class PodcastsSectionComponent implements OnInit, OnDestroy {
   @Input() public podcastFeed: string;
   public podcasts: Podcast[];
+  public keyword: string;
   public podcastFeedSubscription: Subscription;
 
-  private feedUri: string = 'https://djvlwqlqta.execute-api.eu-west-1.amazonaws.com/Prod/';
+  private feedUri: string = 'http://127.0.0.1:8080/all';
+  private searchUri: string = 'http://127.0.0.1:8080/search?keyword='
+  // private feedUri: string = 'https://djvlwqlqta.execute-api.eu-west-1.amazonaws.com/Prod/all';
 
   constructor(private feedService: PodcastService) {
   }
 
   public ngOnInit() {
     let podcast$: Observable<Podcast[]> = this.feedService.getPodcasts(this.feedUri);
+    this.podcastFeedSubscription = podcast$.subscribe(
+      (podcasts: Podcast[]) => this.podcasts = podcasts
+    );
+  }
+
+  public search(keyword: string): void {
+    let podcast$: Observable<Podcast[]> = this.feedService.getPodcasts(this.searchUri + keyword);
     this.podcastFeedSubscription = podcast$.subscribe(
       (podcasts: Podcast[]) => this.podcasts = podcasts
     );
