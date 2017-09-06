@@ -66,6 +66,21 @@ describe('PodcastsSectionComponent', () => {
       });
     });
 
+    describe('button clicked', () => {
+      it('should search in podcasts by keyword', () => {
+        // Arrange
+        spyOn(podcastService, 'getPodcasts')
+          .and.returnValue(Observable.of(mockPodcasts));
+
+        // Act
+        component.search("software");
+
+        // Assert
+        expect(component.podcasts).toBeTruthy();
+        expect(component.podcasts.length).toBe(mockPodcasts.length);
+      });
+    });
+
     describe('ngOnDestroy', (): void => {
       it('should unsubscribe from the observable', (): void => {
         // Arrange
