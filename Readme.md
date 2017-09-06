@@ -22,7 +22,7 @@ If you are one of those old fashioned guys you can still build the code using th
 ```sh
 npm install
 npm test
-npm run serve
+npm run start:dev
 npm run lint
 ```
 
