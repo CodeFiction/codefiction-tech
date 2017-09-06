@@ -11,7 +11,7 @@
         "test:dev": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e --port 4210",
-        "postinstall": "ng build --prod"
+        "postinstall": "ng build --env=prod"
     },
     "private": true,
     "dependencies": {
