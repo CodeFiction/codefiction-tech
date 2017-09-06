@@ -8,6 +8,7 @@ import { Podcast } from '../../models';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
+import { FormsModule } from '@angular/forms';
 
 describe('PodcastsSectionComponent', () => {
   let component: PodcastsSectionComponent;
@@ -20,6 +21,7 @@ describe('PodcastsSectionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [FormsModule],
       declarations: [PodcastsSectionComponent],
       providers: [
         PodcastService,
