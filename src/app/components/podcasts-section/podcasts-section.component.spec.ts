@@ -8,7 +8,10 @@ import { Podcast } from '../../models';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
+
+import { DebugElement } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { By } from '@angular/platform-browser';
 
 describe('PodcastsSectionComponent', () => {
   let component: PodcastsSectionComponent;
@@ -47,7 +50,15 @@ describe('PodcastsSectionComponent', () => {
   });
 
   describe('compiled template', () => {
+    it('should display podcasts', () => {
+      // Act
+      fixture.detectChanges();
 
+      // Assert
+      const podcastsList: DebugElement = fixture.debugElement.query(By.css('#podcast-list'));
+      console.log(podcastsList.nativeElement);
+      // expect(podcastsList.nativeElement.querySelector('a')).toContain('.list-group-item');
+    });
   });
 
   describe('controller', () => {
