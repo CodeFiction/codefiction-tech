@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing'
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MockBackend } from '@angular/http/testing';
 import { BaseRequestOptions, ConnectionBackend, Http } from '@angular/http';
 
@@ -84,7 +84,7 @@ describe('PodcastsSectionComponent', () => {
           .and.returnValue(Observable.of(mockPodcasts));
 
         // Act
-        component.search("software");
+        component.search('software');
 
         // Assert
         expect(component.podcasts).toBeTruthy();

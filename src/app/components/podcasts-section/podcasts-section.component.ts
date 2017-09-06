@@ -16,11 +16,11 @@ export class PodcastsSectionComponent implements OnInit, OnDestroy {
   public keyword: string;
   public podcastFeedSubscription: Subscription;
 
-  //local
-  private feedUri: string = 'http://127.0.0.1:8080/';
-  private searchUri: string = 'http://127.0.0.1:8080/search?keyword='
+  // local
+  private feedUri = 'http://127.0.0.1:8080/';
+  private searchUri = 'http://127.0.0.1:8080/search?keyword=';
 
-  //prod
+  // prod
   // private feedUri: string = 'https://djvlwqlqta.execute-api.eu-west-1.amazonaws.com/Prod/';
   // private searchUri: string = 'https://djvlwqlqta.execute-api.eu-west-1.amazonaws.com/Prod/search?keyword=';
 
@@ -36,7 +36,7 @@ export class PodcastsSectionComponent implements OnInit, OnDestroy {
   }
 
   private loadPodcastResult(uri: string): void {
-    let podcast$: Observable<Podcast[]> = this.feedService.getPodcasts(uri);
+    const podcast$: Observable<Podcast[]> = this.feedService.getPodcasts(uri);
     this.podcastFeedSubscription = podcast$.subscribe(
       (podcasts: Podcast[]) => this.podcasts = podcasts
     );
