@@ -28,14 +28,15 @@ export class PodcastsSectionComponent implements OnInit, OnDestroy {
   }
 
   public ngOnInit() {
-    let podcast$: Observable<Podcast[]> = this.feedService.getPodcasts(this.feedUri);
-    this.podcastFeedSubscription = podcast$.subscribe(
-      (podcasts: Podcast[]) => this.podcasts = podcasts
-    );
+    this.loadPodcastResult(this.feedUri);
   }
 
   public search(keyword: string): void {
-    let podcast$: Observable<Podcast[]> = this.feedService.getPodcasts(this.searchUri + keyword);
+    this.loadPodcastResult(this.searchUri + keyword);
+  }
+
+  private loadPodcastResult(uri: string): void {
+    let podcast$: Observable<Podcast[]> = this.feedService.getPodcasts(uri);
     this.podcastFeedSubscription = podcast$.subscribe(
       (podcasts: Podcast[]) => this.podcasts = podcasts
     );
