@@ -51,13 +51,16 @@ describe('PodcastsSectionComponent', () => {
 
   describe('compiled template', () => {
     it('should display podcasts', () => {
+      // Arrange
+      spyOn(podcastService, 'getPodcasts')
+        .and.returnValue(Observable.of(mockPodcasts));
+
       // Act
       fixture.detectChanges();
 
       // Assert
-      const podcastsList: DebugElement = fixture.debugElement.query(By.css('#podcast-list'));
-      console.log(podcastsList.nativeElement);
-      // expect(podcastsList.nativeElement.querySelector('a')).toContain('.list-group-item');
+      const podcastsList: DebugElement = fixture.debugElement.query(By.css('.list-group-item-heading'));
+      expect(podcastsList.nativeElement.textContent).toContain('foo (22:22:22)');
     });
   });
 
