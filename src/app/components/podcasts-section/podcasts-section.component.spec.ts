@@ -80,7 +80,7 @@ describe('PodcastsSectionComponent', () => {
       });
     });
 
-    describe('button clicked', () => {
+    describe('search button clicked', () => {
       it('should search in podcasts by keyword', () => {
         // Arrange
         spyOn(podcastService, 'getPodcasts')
