@@ -8,10 +8,10 @@
         </div>
         <div class="row">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="title || description" 
+                <input type="text" class="form-control" placeholder="başlık || açıklama" 
                 [(ngModel)]="keyword" (keydown.enter)="search(keyword)">
                 <span class="input-group-btn">
-                <button class="btn btn-default" type="button" (click)="search(keyword)">contains</button>
+                <button class="btn btn-default" type="button" (click)="search(keyword)">içinde ara</button>
               </span>
             </div>
         </div>
