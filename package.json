@@ -11,7 +11,7 @@
         "test:dev": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e --port 4210",
-        "postinstall": "ng build --prod"
+        "postinstall": "ng build --env=prod"
     },
     "private": true,
     "dependencies": {
@@ -28,7 +28,7 @@
         "@angular/router": "^4.0.0",
         "core-js": "^2.4.1",
         "rxjs": "^5.1.0",
-        "zone.js": "^0.8.4",
+        "zone.js": "^0.8.17",
         "express": "^4.15.2"
     },
     "devDependencies": {

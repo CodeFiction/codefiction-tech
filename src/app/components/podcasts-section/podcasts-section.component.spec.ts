@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing'
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MockBackend } from '@angular/http/testing';
 import { BaseRequestOptions, ConnectionBackend, Http } from '@angular/http';
 
@@ -8,6 +8,10 @@ import { Podcast } from '../../models';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
+
+import { DebugElement } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { By } from '@angular/platform-browser';
 
 describe('PodcastsSectionComponent', () => {
   let component: PodcastsSectionComponent;
@@ -20,6 +24,7 @@ describe('PodcastsSectionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [FormsModule],
       declarations: [PodcastsSectionComponent],
       providers: [
         PodcastService,
@@ -45,7 +50,18 @@ describe('PodcastsSectionComponent', () => {
   });
 
   describe('compiled template', () => {
+    it('should display podcasts', () => {
+      // Arrange
+      spyOn(podcastService, 'getPodcasts')
+        .and.returnValue(Observable.of(mockPodcasts));
 
+      // Act
+      fixture.detectChanges();
+
+      // Assert
+      const podcastsList: DebugElement = fixture.debugElement.query(By.css('.list-group-item-heading'));
+      expect(podcastsList.nativeElement.textContent).toContain('foo (22:22:22)');
+    });
   });
 
   describe('controller', () => {
@@ -57,6 +73,21 @@ describe('PodcastsSectionComponent', () => {
 
         // Act
         fixture.detectChanges();
+
+        // Assert
+        expect(component.podcasts).toBeTruthy();
+        expect(component.podcasts.length).toBe(mockPodcasts.length);
+      });
+    });
+
+    describe('search button clicked', () => {
+      it('should search in podcasts by keyword', () => {
+        // Arrange
+        spyOn(podcastService, 'getPodcasts')
+          .and.returnValue(Observable.of(mockPodcasts));
+
+        // Act
+        component.search('software');
 
         // Assert
         expect(component.podcasts).toBeTruthy();
