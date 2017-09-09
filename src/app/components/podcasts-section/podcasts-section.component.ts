@@ -17,8 +17,8 @@ export class PodcastsSectionComponent implements OnInit, OnDestroy {
   public podcastFeedSubscription: Subscription;
 
   // prod
-  private feedUri: string = 'https://djvlwqlqta.execute-api.eu-west-1.amazonaws.com/Prod/';
-  private searchUri: string = 'https://djvlwqlqta.execute-api.eu-west-1.amazonaws.com/Prod/search?keyword=';
+  private feedUri: string = 'https://djvlwqlqta.execute-api.eu-west-1.amazonaws.com/Prod/podcasts/';
+  private searchUri: string = 'https://djvlwqlqta.execute-api.eu-west-1.amazonaws.com/Prod/podcasts/search?keyword=';
 
   constructor(private feedService: PodcastService) {
   }
